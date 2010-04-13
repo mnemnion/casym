@@ -3,7 +3,7 @@ size(400);
 filldraw(box((-10,-10),(10,10)),black,black);
 int i;
 int numcircles=18;
-
+//obligatory comment
 draw(circle((0,0),4),white);
 path[] circa = new path[];
 
