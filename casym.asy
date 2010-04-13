@@ -10,13 +10,8 @@ path[] circa = new path[];
 
 for(i=1; i<=numcircles; ++i) {
 	circa[i]=circle(4*dir(i*360/numcircles),4);
-	if (i % 3 == 0) {
-		draw(circa[i],red);
-	} else if (i % 3 == 1) {
+
 		draw(circa[i],white);
-	} else if (i % 3 == 2) {
-		draw(circa[i],white);
-	}
 }
 
 
