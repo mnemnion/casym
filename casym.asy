@@ -1,4 +1,41 @@
 
+struct Move {
+	int x,y ;
+	int num; //positive for moves, negative for other symbols
+	bool iswhite; 
+	bool special; //both false is black 
+	string glyph; //special symbol for stone or at
+	string comment;
+	pen specialpen; //sends a color or font ; might be needed.
+	
+	void operator init(int x, int y, int num, bool iswhite = false) {
+		this.x = x;
+		this.y = y;
+		this.num = num;
+		this.iswhite = iswhite;
+	}
+}
+
+struct Circoban {
+	int size;
+	int numcircles;
+	int movenum;
+	bool whitemove;
+	real fontsize;
+	picture pic;
+	Move[] move;
+
+	void operator init(int size, int numcircles=12) {
+		this.size = size;
+		this.numcircles = numcircles;
+		this.fontsize = 1; // THIS.size/(this.lines+2); // borrowed from gasym, needs changing
+		this.movenum = 1;
+		this.whitemove = false; // black plays first
+	}
+}
+
+
+
 size(400);
 filldraw(box((-10,-10),(10,10)),black,black);
 int i;
